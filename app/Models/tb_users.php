@@ -10,7 +10,7 @@ use Laravel\Sanctum\HasApiTokens;
 use Illuminate\Database\Eloquent\Concerns\HasUuids;
 use Illuminate\Support\Str;
 
-class User extends Authenticatable
+class tb_users extends Authenticatable
 {
     use HasApiTokens, HasFactory, Notifiable;
     use HasUuids;
@@ -50,6 +50,11 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
         'userPassword' => 'hashed',
     ];
+
+    public function getAuthPassword()
+    {
+        return $this->userPassword; // Tell Laravel to use the 'userPassword' column for authentication
+    }
 
     protected static function boot()
     {
