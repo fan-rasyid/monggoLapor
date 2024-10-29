@@ -19,14 +19,13 @@
 
 <body class="font-sans antialiased">
     <div class="min-h-screen bg-gray-100 dark:bg-gray-900">
-        @include('layouts.navbar')
-
+        @include('layouts.dashboard-navbar')
         <!-- Page Content -->
         <main>
             {{ $slot }}
         </main>
-        @include('layouts.footer')
     </div>
+    <script src="../path/to/flowbite/dist/flowbite.min.js"></script>
 </body>
 
 </html>

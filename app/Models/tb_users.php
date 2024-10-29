@@ -29,6 +29,10 @@ class tb_users extends Authenticatable
         'userName',
         'userEmail',
         'userPassword',
+        'userAddress',
+        'userPhone',
+        'userDateOfBirth',
+        'userRole',
     ];
 
     /**

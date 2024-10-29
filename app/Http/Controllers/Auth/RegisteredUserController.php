@@ -38,12 +38,14 @@ class RegisteredUserController extends Controller
             'userName' => ['required', 'string', 'max:255'],
             'userEmail' => ['required', 'string', 'email', 'max:255', Rule::unique('tb_users', 'userEmail'),],
             'userPassword' => ['required', 'confirmed'],
+            'userRole' => ['in:admin, opd, masyarakat'],
         ]);
 
         $user = tb_users::create([
             'userName' => $validated['userName'],
             'userEmail' => strtolower($validated['userEmail']),
             'userPassword' => Hash::make($validated['userPassword']),
+            'userRole' => $validated['userRole'] ?? 'masyarakat'
         ]);
 
         event(new Registered($user));
