@@ -13,7 +13,7 @@
                     </h6>
                 </div>
                 <div class="basis-1/2">
-                    <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
+                    <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg shadow-2xl">
                         <div class="p-6 text-gray-900 dark:text-gray-100">
                             <form class="space-y-6" method="POST" action="{{ route('login') }}">
                                 @csrf

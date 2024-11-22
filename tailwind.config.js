@@ -23,9 +23,17 @@ export default {
         },
     },
 
-    plugins: [forms,
-        require('flowbite/plugin')
-    ],
+    // plugins: [forms,
+    //     require('flowbite/plugin')([
+    //         datatables: true,
+    //     ]),
+    // ],
+    plugins: [
+    require('@tailwindcss/forms'),
+    require('flowbite/plugin')({
+        datatables: true,
+    }),
+],
 };
 
 

@@ -1,7 +1,10 @@
 <?php
 
 use App\Http\Controllers\AduanController;
+use App\Http\Controllers\CategoriesController;
+use App\Http\Controllers\OPDController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -28,6 +31,9 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
     Route::get('/inputaduan', [AduanController::class, 'index'])->name('aduan.input');
     Route::get('/dashboard', [ProfileController::class, 'dashboard'])->name('dashboard');
+    Route::get('/categories', [CategoriesController::class, 'index'])->name('categories');
+    Route::get('/opds', [OPDController::class, 'index'])->name('opds');
+    Route::get('/users', [UserController::class, 'index'])->name('users');
 });
 
 require __DIR__ . '/auth.php';
