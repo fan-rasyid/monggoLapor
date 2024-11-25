@@ -1,6 +1,7 @@
 <x-admin-layout>
     <div class="p-4 sm:ml-64">
         <div class="flex p-4 mb-4 mt-14 rounded bg-gray-50 dark:bg-gray-800">
+            <a href="{{ route('categories.create') }}" class="button ">Create</a>
             <table id="default-table">
                 <thead>
                     <tr>

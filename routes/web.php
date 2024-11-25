@@ -34,6 +34,8 @@ Route::middleware('auth')->group(function () {
     Route::get('/categories', [CategoriesController::class, 'index'])->name('categories');
     Route::get('/opds', [OPDController::class, 'index'])->name('opds');
     Route::get('/users', [UserController::class, 'index'])->name('users');
+    Route::get('/opds-create', [OPDController::class, 'create'])->name('opds.create');
+    Route::get('/categories-create', [CategoriesController::class, 'create'])->name('categories.create');
 });
 
 require __DIR__ . '/auth.php';
